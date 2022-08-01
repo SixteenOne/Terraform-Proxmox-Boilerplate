@@ -1,15 +1,11 @@
 resource "proxmox_vm_qemu" "DB-Cloud-Creation" {
     name = "${var.servername}${count.index + 1}"
-    desc = "Enter a description here"
+    desc = "Enter-a-description-here"
     vmid = "20${count.index + 1}"
     #nameserver = "192.168.68.250"  # Use to change your DNS Server
     count = var.vm_count
-    # Node name has to be the same name as within the cluster
-    # this might not include the FQDN
-
+    
    	target_node = element(var.proxmox_hosts, count.index)
-
-    # target_node = "tiamat-ice"
 
     # The destination resource pool for the new VM
     #pool = "pool0"

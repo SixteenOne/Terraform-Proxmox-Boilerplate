@@ -13,18 +13,18 @@ variable "pm_password" {
 }
 
 variable "ssh_key" {
-  default = "enter ssh detail here"
+  default = "enter-ssh-detail-here"
 }
 
 variable "servername" {
-  default = "enter name of servers"
+  default = "enter-name-of-servers"
 }
 
 variable "vm_count" {
-  description = "Number of VM's required"
+  description = "Number-of-VMs-required"
   default = 3
 }
 
 variable "proxmox_hosts" {
-  default = ["if you have a cluster","Comma Seperate them","Here in quotes"]
+  default = ["if-you-have-a-cluster","Comma-Seperate-them","Here-in-quotes"]
 }
